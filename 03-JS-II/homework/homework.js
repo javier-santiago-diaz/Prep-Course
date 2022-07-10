@@ -110,7 +110,20 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  if (numero % 3 === 0 & numero % 5 === 0) {
+    return "fizzbuzz"
+  }
+  else if (numero % 3 === 0) {
+    return "fizz"
+  }
+  else if (numero % 5 === 0) {
+    return "buzz"
+  }
+  else {
+    return numero
+  }
 }
+console.log(fizzBuzz(3))
 
 function operadoresLogicos(num1, num2, num3) {
   //La función recibe tres números distintos. 
@@ -133,6 +146,12 @@ function esVerdadero(valor) {
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
+  if (valor) {
+    return "Soy verdadero"
+  }
+  else {
+    return false
+  }
 
 }
 
