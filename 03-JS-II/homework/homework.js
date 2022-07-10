@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { convertToRecursiveGlob } = require("@11ty/eleventy/src/TemplatePath")
+
 function obtenerMayor(x, y) {
   // "x" e "y" son números enteros (int).
   // Devuelve el número más grande
@@ -159,13 +161,24 @@ function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-
+  var resultado = []
+  for (let i = 0; i < 11; i++) {
+    resultado.push(i * 6)
+  }
+  return resultado
 }
+console.log(tablaDelSeis())
 
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-
+  var strin = numero.toString();
+  if (strin.length === 3) {
+    return true
+  }
+  else {
+    return false
+  }
 }
 
 function doWhile(numero) {
